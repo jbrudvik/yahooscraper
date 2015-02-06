@@ -13,6 +13,9 @@ setup(
     url='https://github.com/jbrudvik/yahooscraper',
     keywords=['scrape', 'screen', 'web', 'Yahoo', 'login', 'fantasy'],
     packages=['yahooscraper', 'yahooscraper.fantasy'],
+    classifiers=[
+        'Programming Language :: Python :: 3.4'
+    ]
     install_requires=[
         'beautifulsoup4 >= 4.3.2'
     ])
