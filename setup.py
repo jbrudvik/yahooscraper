@@ -13,7 +13,7 @@ except:
 
 setup(
     name='yahooscraper',
-    version='0.0.4',
+    version='0.0.5',
     description='Utilities for scraping Yahoo pages',
     long_description=long_description,
     license='MIT',
