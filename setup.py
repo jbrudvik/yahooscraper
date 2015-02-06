@@ -5,7 +5,7 @@ except ImportError:
 
 setup(
     name='yahooscraper',
-    version=0.0.1,
+    version='0.0.1',
     description='Utilities for scraping Yahoo pages',
     license='MIT',
     author='Jeremy Brudvik',
