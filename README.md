@@ -38,7 +38,7 @@ Log in to Yahoo:
     session.post(login_url, data=login_post_data)
 
 
-Output Fantasy NBA team name (continuing with authenticated session from previous example):
+Output Fantasy NBA team name (continuing on from first example):
 
     LEAGUE_ID = 237834
     TEAM_ID = 8
