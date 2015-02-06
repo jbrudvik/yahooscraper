@@ -9,7 +9,7 @@ try:
     import pypandoc
     long_description = pypandoc.convert(README, 'rst')
 except:
-    long_description = open(README).read()
+    long_description = ''
 
 setup(
     name='yahooscraper',
