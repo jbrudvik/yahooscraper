@@ -3,10 +3,19 @@ try:
 except ImportError:
     from distutils.core import setup
 
+README = 'README.md'
+
+try:
+    import pypandoc
+    long_description = pypandoc.convert(README, 'rst')
+except:
+    long_description = open(README).read()
+
 setup(
     name='yahooscraper',
     version='0.0.1',
     description='Utilities for scraping Yahoo pages',
+    long_description=long_description,
     license='MIT',
     author='Jeremy Brudvik',
     author_email='jeremy@brudvik.me',
