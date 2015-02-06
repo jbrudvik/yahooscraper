@@ -77,7 +77,7 @@ class YahooScraperFantasyTeamTests(unittest.TestCase):
     def test_team(self):
         import yahooscraper as ys
         self.assertIsNone(ys.fantasy.team.team(''))
-        self.assertEquals(
+        self.assertEqual(
             ys.fantasy.team.team('<title>league-name - team-name</title>'),
             'team-name')
 
