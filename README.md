@@ -14,6 +14,13 @@ represents a set of URLs, this function takes parameters.
 If the data is not found, `None` is returned. Or, in cases where an iterable
 should be returned, an empty iterable may be returned.
 
+See more detailed API documentation using pydoc:
+
+    $ pydoc yahooscraper
+    $ pydoc yahooscraper.login
+    $ pydoc yahooscraper.fantasy.team
+
+
 ## Examples
 
 Log in to Yahoo:
