@@ -62,6 +62,6 @@ Output Fantasy NBA team name (continuing on from first example):
     $ pip install yahooscraper
 
 
-## Running tests
+## Test
 
     $ python tests.py
