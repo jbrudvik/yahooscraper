@@ -54,6 +54,10 @@ class YahooScraperLoginTests(unittest.TestCase):
         import yahooscraper as ys
         self.assertIsNotNone(ys.login.url())
 
+    def test_headers(self):
+        import yahooscraper as ys
+        self.assertIsInstance(ys.login.headers(), dict)
+
     def test_path(self):
         import yahooscraper as ys
         self.assertIsNone(ys.login.path(''))

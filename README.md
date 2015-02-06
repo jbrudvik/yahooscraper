@@ -15,6 +15,10 @@ Additionally, each leaf module also includes a `url()` function, which returns
 the URL of the page represented by the module. In cases where the module
 represents a set of URLs, this function takes parameters.
 
+Finally, some modules also include a `headers()` function, which returns a dict
+of HTTP headers necessary to load the expected version of the page. Without
+these headers, the scraping functions may not work correctly.
+
 If the data is not found, `None` is returned. Or, in cases where an iterable
 should be returned, an empty iterable may be returned.
 
@@ -40,7 +44,7 @@ Log in to Yahoo:
     }
 
     session = requests.Session()
-    session.headers.update(HEADERS)
+    session.headers.update(ys.login.headers())
 
     response = session.get(ys.login.url())
     login_path = ys.login.path(response.text)
