@@ -4,7 +4,6 @@ Python utilities for scraping Yahoo pages
 
 [![Build status](https://img.shields.io/travis/jbrudvik/yahooscraper.svg)](https://travis-ci.org/jbrudvik/yahooscraper)
 [![PyPI version](https://img.shields.io/pypi/v/yahooscraper.svg)](https://pypi.python.org/pypi/yahooscraper/)
-[![Supported Python versions](https://pypip.in/py_versions/yahooscraper/badge.svg?style=flat)](https://pypi.python.org/pypi/yahooscraper/)
 
 The yahooscraper package is organized into modules and submodules. Each leaf
 module (i.e., module without submodules) contains functions that take a single
