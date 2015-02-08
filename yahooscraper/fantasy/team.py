@@ -59,8 +59,8 @@ def date(page):
 
 def alternates(page):
     """
-    Given text of Yahoo fantasy team page, return iterable containing players
-    on bench who are available to play, where each player is a dict containing:
+    Return iterable containing players on bench who are available to play,
+    where each player is a dict containing:
 
     - name
     - details
@@ -82,8 +82,7 @@ def alternates(page):
 
 def start_active_players_path(page):
     """
-    Given text of Yahoo fantasy team page, return the path in the
-    "Start Active Players" button
+    Return the path in the "Start Active Players" button
     """
     soup = BeautifulSoup(page)
     try:
