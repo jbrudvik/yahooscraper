@@ -32,36 +32,38 @@ See more detailed API documentation using pydoc:
 
 Log in to Yahoo:
 
-    import requests
-    import yahooscraper as ys
-    from urllib.parse import urljoin
+```python
+import requests
+import yahooscraper as ys
+from urllib.parse import urljoin
 
-    DESKTOP_USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1)\
-    AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.99 Safari/537.36'
-    HEADERS = {
-        'user-agent': DESKTOP_USER_AGENT
-    }
+DESKTOP_USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1)\
+AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.99 Safari/537.36'
+HEADERS = {
+    'user-agent': DESKTOP_USER_AGENT
+}
 
-    session = requests.Session()
-    session.headers.update(ys.login.headers())
+session = requests.Session()
+session.headers.update(ys.login.headers())
 
-    response = session.get(ys.login.url())
-    login_path = ys.login.path(response.text)
-    login_url = urljoin(response.url, login_path)
-    login_post_data = ys.login.post_data(response.text, username, password)
+response = session.get(ys.login.url())
+login_path = ys.login.path(response.text)
+login_url = urljoin(response.url, login_path)
+login_post_data = ys.login.post_data(response.text, username, password)
 
-    session.post(login_url, data=login_post_data)
-
+session.post(login_url, data=login_post_data)
+```
 
 Output Fantasy NBA team name (continuing on from first example):
 
-    LEAGUE_ID = 237834
-    TEAM_ID = 8
+```python
+LEAGUE_ID = 237834
+TEAM_ID = 8
 
-    response = session.get(ys.fantasy.team.url('nba', LEAGUE_ID, TEAM_ID))
-    team = ys.fantasy.team.team(response.text)
-    print(team)
-
+response = session.get(ys.fantasy.team.url('nba', LEAGUE_ID, TEAM_ID))
+team = ys.fantasy.team.team(response.text)
+print(team)
+```
 
 ## Install
 
