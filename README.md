@@ -70,6 +70,14 @@ print(team)
     $ pip install yahooscraper
 
 
-## Test
+## Development
+
+### Test
 
     $ python tests.py
+
+### Deploy
+
+- Bump version in `setup.py`
+- `$ python setup.py register`
+- `$ python setup.py sdist upload`
