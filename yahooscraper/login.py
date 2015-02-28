@@ -12,12 +12,16 @@ DESKTOP_USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1)\
     AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.99 Safari/537.36'
 
 
+class AuthenticationError(Exception):
+    pass
+
+
 def authenticated_session(username, password):
     """
     Given username and password, return an authenticated Yahoo `requests`
     session that can be used for further scraping requests.
 
-    Throw an Exception if authentication fails.
+    Throw an AuthencationError if authentication fails.
     """
     session = requests.Session()
     session.headers.update(headers())
@@ -26,7 +30,10 @@ def authenticated_session(username, password):
     login_path = path(response.text)
     login_url = urljoin(response.url, login_path)
     login_post_data = post_data(response.text, username, password)
-    session.post(login_url, data=login_post_data)
+
+    response = session.post(login_url, data=login_post_data)
+    if response.url == url():
+        raise AuthencationError()
 
     return session
 
