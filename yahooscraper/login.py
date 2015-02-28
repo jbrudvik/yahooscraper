@@ -4,6 +4,7 @@ Login page
 
 import requests
 from bs4 import BeautifulSoup
+from urllib.parse import urljoin
 
 
 URL = 'https://login.yahoo.com'
