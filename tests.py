@@ -50,6 +50,10 @@ class YahooScraperImportTests(unittest.TestCase):
 
 
 class YahooScraperLoginTests(unittest.TestCase):
+    def test_authenticated_session(self):
+        import yahooscraper as ys
+        self.assertIsNotNone(ys.login.authenticated_session)
+
     def test_url(self):
         import yahooscraper as ys
         self.assertIsNotNone(ys.login.url())

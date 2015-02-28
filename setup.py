@@ -26,5 +26,6 @@ setup(
         'Programming Language :: Python :: 3.4'
     ],
     install_requires=[
-        'beautifulsoup4 >= 4.3.2'
+        'beautifulsoup4 >= 4.3.2',
+        'requests >= 2.5.3'
     ])
