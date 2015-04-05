@@ -4,7 +4,11 @@ Login page
 
 import requests
 from bs4 import BeautifulSoup
-from urllib.parse import urljoin
+#adds support for python 2.7
+try:
+    from urllib.parse import urljoin
+except ImportError:
+    from urlparse import urljoin
 
 
 URL = 'https://login.yahoo.com'
