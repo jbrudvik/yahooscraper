@@ -4,7 +4,6 @@ Login page
 
 import requests
 from bs4 import BeautifulSoup
-#adds support for python 2.7
 try:
     from urllib.parse import urljoin
 except ImportError:
