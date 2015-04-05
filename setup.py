@@ -23,6 +23,7 @@ setup(
     keywords=['scrape', 'screen', 'web', 'Yahoo', 'login', 'fantasy'],
     packages=['yahooscraper', 'yahooscraper.fantasy'],
     classifiers=[
+        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3.4'
     ],
     install_requires=[
